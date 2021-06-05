@@ -8,13 +8,12 @@
           <button class="positive" @click="$refs.board.addNote('positive')">Positive note</button>
           <button class="neutral" @click="$refs.board.addNote('neutral')">Neutral note</button>
           <button class="negative" @click="$refs.board.addNote('improvement')">Improvement note</button>
-
           <button @click="$refs.board.reArrange()" title="Rearranges the notes by amount of votes and make them fit the current window">
             Re-arrange <sup class="beta">BETA</sup>
           </button>
         </div>
         <div class="board_actions">
-          <span class="subtle" :class="{'hidden':!unsavedChanges}">There are unsaved changes</span>
+          <span class="subtle mr-small" :class="{'hidden':!unsavedChanges}">There are unsaved changes</span>
           <button v-on:click="saveBoards" :disabled="!unsavedChanges">Save</button>
           <button class="menu-toggle invert" @click.stop="toggleSidebar">☰</button>
         </div>
